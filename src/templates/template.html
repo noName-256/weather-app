@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+  </head>
+  <body class="color-preset-1">
+    <div class="background"></div>
+    <div class="general-info">
+      <div class="temperature-info">...°</div>
+      <div class="weather-info">Unknown</div>
+      <div class="search-bar">
+        <img
+          src="../assets/images/search2.svg"
+          alt="search"
+          class="search-icon"
+        />
+        <input type="text" class="search" placeholder="Search" />
+      </div>
+    </div>
+    <div class="scroll-content">
+      <div class="waves"></div>
+      <div class="extra-info">
+        <div class="location">
+          <div class="text-container">Unknown location</div>
+        </div>
+        <div class="three-day-forecast">
+          <div class="today day">
+            <div class="day-text">Today</div>
+            <div class="temperature">?°</div>
+            <img
+              src="../assets/images/cloud-question.svg"
+              alt="unknown weather"
+              class="weather-icon"
+            />
+          </div>
+          <div class="tomorrow day">
+            <div class="day-text">Tomorrow</div>
+            <div class="temperature">?°</div>
+            <img
+              src="../assets/images/cloud-question.svg"
+              alt="unknown weather"
+              class="weather-icon"
+            />
+          </div>
+          <div class="overmorrow day">
+            <div class="day-text">Overmorrow</div>
+            <div class="temperature">?°</div>
+            <img
+              src="../assets/images/cloud-question.svg"
+              alt="unknown weather"
+              class="weather-icon"
+            />
+          </div>
+        </div>
+        <canvas id="temperature-chart"></canvas>
+        <div class="hourly-forecast-container">
+          <h1 class="title">Hourly Forecast</h1>
+          <div class="hourly-forecast">
+            <div class="hour-0 hour">
+              <div class="hour-text">00:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-1 hour">
+              <div class="hour-text">01:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-2 hour">
+              <div class="hour-text">02:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-3 hour">
+              <div class="hour-text">03:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-4 hour">
+              <div class="hour-text">04:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-5 hour">
+              <div class="hour-text">05:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-6 hour">
+              <div class="hour-text">06:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-7 hour">
+              <div class="hour-text">07:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-8 hour">
+              <div class="hour-text">08:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-9 hour">
+              <div class="hour-text">09:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-10 hour">
+              <div class="hour-text">10:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-11 hour">
+              <div class="hour-text">11:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-12 hour">
+              <div class="hour-text">12:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-13 hour">
+              <div class="hour-text">13:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-14 hour">
+              <div class="hour-text">14:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-15 hour">
+              <div class="hour-text">15:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-16 hour">
+              <div class="hour-text">16:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-17 hour">
+              <div class="hour-text">17:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-18 hour">
+              <div class="hour-text">18:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-19 hour">
+              <div class="hour-text">19:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-20 hour">
+              <div class="hour-text">20:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-21 hour">
+              <div class="hour-text">21:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-22 hour">
+              <div class="hour-text">22:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+            <div class="hour-23 hour">
+              <div class="hour-text">23:00</div>
+              <img
+                src="../assets/images/cloud-question.svg"
+                alt="unknown weather"
+                class="weather-icon"
+              />
+              <div class="temperature">?°</div>
+            </div>
+          </div>
+        </div>
+        <div class="useful-info">
+          <h1 class="title">Useful Info</h1>
+          <div class="cards-container">
+            <div class="card humidity">
+              <img
+                src="../assets/images/humidity.svg"
+                alt="humidity"
+                class="icon"
+              />
+              <div class="description">Humidity</div>
+              <div class="info">?</div>
+            </div>
+            <div class="card feels-like">
+              <img
+                src="../assets/images/thermometer.svg"
+                alt="temperature"
+                class="icon"
+              />
+              <div class="description">Feels like</div>
+              <div class="info">?</div>
+            </div>
+            <div class="card wind-speed">
+              <img src="../assets/images/wind.svg" alt="wind" class="icon" />
+              <div class="description">Wind speed</div>
+              <div class="info">?</div>
+            </div>
+            <div class="card wind-direction">
+              <img
+                src="../assets/images/wind-direction.svg"
+                alt="wind direction"
+                class="icon"
+              />
+              <div class="description">Wind direction</div>
+              <div class="info">?</div>
+            </div>
+            <div class="card uv-index">
+              <img src="../assets/images/sun-haze.svg" alt="uv" class="icon" />
+              <div class="description">UV index</div>
+              <div class="info">?</div>
+            </div>
+            <div class="card cloud-cover">
+              <img
+                src="../assets/images/cloud-cover.svg"
+                alt="cloud cover"
+                class="icon"
+              />
+              <div class="description">Cloud cover</div>
+              <div class="info">?</div>
+            </div>
+            <div class="card visibility">
+              <img
+                src="../assets/images/visibility.svg"
+                alt="visibility"
+                class="icon"
+              />
+              <div class="description">Visibility</div>
+              <div class="info">?</div>
+            </div>
+            <div class="card rain-chance">
+              <img
+                src="../assets/images/rain.svg"
+                alt="rain chance"
+                class="icon"
+              />
+              <div class="description">Chance of rain</div>
+              <div class="info">?</div>
+            </div>
+          </div>
+        </div>
+        <div class="metric-imperial-toggle">
+          <h1 class="description">Use measurements in:</h1>
+          <form class="checkbox-container">
+            <label class="text metric checked">
+              <input type="radio" name="metric-imperial" checked />
+              Metric</label
+            >
+            <label class="text imperial">
+              <input type="radio" name="metric-imperial" />
+              Imperial</label
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
